@@ -88,7 +88,6 @@ PyScreeze==0.1.28
 python-dateutil==2.8.2
 pytweening==1.0.4
 pytz==2022.1
-pywin32==304
 pyxlsb==1.0.9
 pyzmq==23.2.0
 requests==2.26.0
