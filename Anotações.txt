@@ -1,0 +1,84 @@
+@app.route('/api/notas/<string:revenda>',methods=['GET'])
+def notas(revenda):
+    """Retorna o relatório 03.02.37"""
+    if revenda == "avare":
+        notas = db.volumeMes()
+        return json.loads(notas.to_json(orient = 'columns'))
+    elif revenda == 'itape':
+        notas = dbIp.volumeMes()
+        return json.loads(notas.to_json(orient = 'columns'))
+    else:
+        return f"Erro: {revenda} não é um valor válido!"
+        
+@app.route('/api/pedidos/<string:revenda>',methods=['GET'])
+def pedidos(revenda):
+    """Retorna o relatório 03.01.36.04"""
+    if revenda == 'avare':
+        pedidos = db.dbDiaB()
+        return json.loads(pedidos.to_json(orient = 'columns'))
+    elif revenda =='itape':
+        pedidos = dbIp.dbDiaB()
+        return json.loads(pedidos.to_json(orient = 'columns'))
+    else:
+        return f"Erro: {revenda} não é um valor válido!"
+
+@app.route('/api/meta/<string:revenda>',methods=['GET'])
+def meta(revenda):
+    """Retorna o relatório 05.10"""
+    if revenda == 'avare':
+        meta = db.metas()
+        return json.loads(meta.to_json(orient = 'columns'))
+    elif revenda == 'itape':
+        meta = dbIp.metas()
+        return json.loads(meta.to_json(orient = 'columns'))
+    else:
+        return f"Erro: {revenda} não é um valor válido!"
+
+@app.route('/api/diasuteis/<string:revenda>',methods=['GET'])
+def diasUteis(revenda):
+    """Retorna o relatório de dias uteis"""
+    if revenda == "avare":
+        diasUteis = db.diasUteis()
+        return json.loads(diasUteis.to_json(orient = 'columns'))
+    elif revenda == 'itape':
+        diasUteis = dbIp.diasUteis()
+        return json.loads(diasUteis.to_json(orient = 'columns'))
+    else:
+        return f"Erro: {revenda} não é um valor válido!"
+        
+
+@app.route('/api/grupo/<string:revenda>',methods=['GET'])
+def grupo(revenda):
+    """Retorna o relatório Grupo Produto"""
+    if revenda == 'avare':
+        grupo = db.grupoProd()
+        return json.loads(grupo.to_json(orient = 'columns'))
+    elif revenda == 'itape':
+        grupo = dbIp.grupoProd()
+        return json.loads(grupo.to_json(orient = 'columns'))
+    else:
+        return f"Erro: {revenda} não é um valor válido!"
+
+@app.route('/api/pdvs/<string:revenda>',methods=['GET'])
+def pdvs(revenda):
+    """Retorna o relatório 01.20.12-Total"""
+    if revenda == 'avare':
+        pdvs = db.PDVs()
+        return json.loads(pdvs.to_json(orient = 'columns'))
+    elif revenda == 'itape':
+        pdvs = dbIp.PDVs()
+        return json.loads(pdvs.to_json(orient = 'columns'))
+    else:
+        return f"Erro: {revenda} não é um valor válido!"
+
+@app.route('/api/hecto/<string:revenda>',methods=['GET'])
+def hecto(revenda):
+    """Retorna o relatório de 01.11"""
+    if revenda == 'avare':
+        hecto = db.hecto()
+        return json.loads(hecto.to_json(orient = 'columns'))
+    elif revenda == 'itape':
+        hecto = dbIp.hecto()
+        return json.loads(hecto.to_json(orient = 'columns'))
+    else:
+        return f"Erro: {revenda} não é um valor válido!"
