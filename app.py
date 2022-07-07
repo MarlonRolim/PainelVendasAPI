@@ -15,9 +15,9 @@ app.secret_key = 'MarlonRolim'
 
 @app.route('/')
 def painelVendasav():
-    grupo = db.grupoProd()
-    meta = db.metas()
-    volumeMes = db.volumeMes()
+    #grupo = db.grupoProd()
+    #meta = db.metas()
+    #volumeMes = db.volumeMes()
     
     # Média Necessária
     '''
