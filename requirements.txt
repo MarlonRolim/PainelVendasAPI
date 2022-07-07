@@ -88,6 +88,7 @@ PyScreeze==0.1.28
 python-dateutil==2.8.2
 pytweening==1.0.4
 pytz==2022.1
+pywin32==304
 pyxlsb==1.0.9
 pyzmq==23.2.0
 requests==2.26.0
@@ -108,7 +109,6 @@ tornado==6.1
 traitlets==5.3.0
 trio==0.19.0
 trio-websocket==0.9.2
-ttkthemes==3.2.2
 typing_extensions==4.0.1
 tzdata==2022.1
 urllib3==1.26.7
