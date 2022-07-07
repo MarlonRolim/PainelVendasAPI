@@ -8,7 +8,7 @@ spec.register(app)
 import db
 import dbIp
 import json
-
+app.secret_key = 'MarlonRolim'
 
 
 
