@@ -20,23 +20,23 @@ def painelVendasav():
     #volumeMes = db.volumeMes()
     
     # Média Necessária
-    '''
-    mnambev = ((meta.Meta.sum()-volumeMes.Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
-    mncerv = ((meta[meta.Produto.isin(list(grupo['Cerv TT'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['Cerv TT'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
-    mnnab = ((meta[meta.Produto.isin(list(grupo['NAB'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['NAB'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
-    mnrgb = ((meta[meta.Produto.isin(list(grupo['RGB'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['RGB'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
-    mnheco = ((meta[meta.Produto.isin(list(grupo['HECO'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['HECO'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
-    mnpm = ((meta[meta.Produto.isin(list(grupo['Puro Malte'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['Puro Malte'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
+    
+    #mnambev = ((meta.Meta.sum()-volumeMes.Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
+    #mncerv = ((meta[meta.Produto.isin(list(grupo['Cerv TT'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['Cerv TT'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
+    #mnnab = ((meta[meta.Produto.isin(list(grupo['NAB'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['NAB'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
+    #mnrgb = ((meta[meta.Produto.isin(list(grupo['RGB'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['RGB'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
+    #mnheco = ((meta[meta.Produto.isin(list(grupo['HECO'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['HECO'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
+    #mnpm = ((meta[meta.Produto.isin(list(grupo['Puro Malte'].unique()))].Meta.sum()-volumeMes[volumeMes.Produto.isin(list(grupo['Puro Malte'].unique()))].Volume.sum())/(db.diasUteis()[0]-db.diasUteis()[1])).round(1)
     
     # Buffer
-    db_Buffer = db.pedidosDia('S', 'T')
-    bambev = db_Buffer.Volume.sum().round(1)
-    bcerv = db_Buffer[db_Buffer.Produto.isin(list(grupo['Cerv TT'].unique()))].Volume.sum().round(1)
-    bnab = db_Buffer[db_Buffer.Produto.isin(list(grupo['NAB'].unique()))].Volume.sum().round(1)
-    brgb = db_Buffer[db_Buffer.Produto.isin(list(grupo['RGB'].unique()))].Volume.sum().round(1)
-    bheco = db_Buffer[db_Buffer.Produto.isin(list(grupo['HECO'].unique()))].Volume.sum().round(1)
-    bpm = db_Buffer[db_Buffer.Produto.isin(list(grupo['Puro Malte'].unique()))].Volume.sum().round(1)
-    '''
+    #db_Buffer = db.pedidosDia('S', 'T')
+    #bambev = db_Buffer.Volume.sum().round(1)
+    #bcerv = db_Buffer[db_Buffer.Produto.isin(list(grupo['Cerv TT'].unique()))].Volume.sum().round(1)
+    #bnab = db_Buffer[db_Buffer.Produto.isin(list(grupo['NAB'].unique()))].Volume.sum().round(1)
+    #brgb = db_Buffer[db_Buffer.Produto.isin(list(grupo['RGB'].unique()))].Volume.sum().round(1)
+    #bheco = db_Buffer[db_Buffer.Produto.isin(list(grupo['HECO'].unique()))].Volume.sum().round(1)
+    #bpm = db_Buffer[db_Buffer.Produto.isin(list(grupo['Puro Malte'].unique()))].Volume.sum().round(1)
+    
     mnambev = "1000"
     mncerv = "900"
     mnnab = "300"
