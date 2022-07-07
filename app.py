@@ -98,4 +98,4 @@ def painelvendasavApi():
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.0.123',debug=True, port=8053)
+    app.run(debug=False)
