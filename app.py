@@ -1,4 +1,4 @@
-from crypt import methods
+
 from flask import Flask, redirect, render_template, request, jsonify
 from flask_pydantic_spec import FlaskPydanticSpec, Response, Request
 from controllers.notas import *
@@ -12,11 +12,11 @@ import json
 app.secret_key = 'MarlonRolim'
 
 
-@app.route("/favicon.ico")
+@app.route("/favicon.ico", methods=["GET"])
 def error():
     return ""
 
-@app.route('/', methods="GET")
+@app.route('/')
 def painelVendasav():
     grupo = db.grupoProd()
     meta = db.metas()
@@ -40,18 +40,18 @@ def painelVendasav():
     bheco = db_Buffer[db_Buffer.Produto.isin(list(grupo['HECO'].unique()))].Volume.sum().round(1)
     bpm = db_Buffer[db_Buffer.Produto.isin(list(grupo['Puro Malte'].unique()))].Volume.sum().round(1)
     '''
-    mnambev = 1000
-    mncerv = 900
-    mnnab = 300
-    mnrgb = 400
-    mnheco = 200
-    mnpm = 150
-    bambev = 5
-    bcerv = 10
-    bnab = 15
-    brgb = 23
-    bheco = 2
-    bpm = 3
+    mnambev = "1000"
+    mncerv = "900"
+    mnnab = "300"
+    mnrgb = "400"
+    mnheco = "200"
+    mnpm = "150"
+    bambev = "5"
+    bcerv = "10"
+    bnab = "15"
+    brgb = "23"
+    bheco = "2"
+    bpm = "3"
     return render_template('index.html',mnambev=mnambev,
                                         mncerv=mncerv,
                                         mnnab=mnnab,
