@@ -12,9 +12,6 @@ import json
 app.secret_key = 'MarlonRolim'
 
 
-@app.route("/favicon.ico", methods=["GET"])
-def error():
-    return ""
 
 @app.route('/')
 def painelVendasav():
