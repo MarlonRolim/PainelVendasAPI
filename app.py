@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import Flask, redirect, render_template, request, jsonify
 from flask_pydantic_spec import FlaskPydanticSpec, Response, Request
 from controllers.notas import *
@@ -15,7 +16,7 @@ app.secret_key = 'MarlonRolim'
 def error():
     return ""
 
-@app.route('/')
+@app.route('/', methods="GET")
 def painelVendasav():
     grupo = db.grupoProd()
     meta = db.metas()
